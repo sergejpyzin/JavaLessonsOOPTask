@@ -1,15 +1,27 @@
 package LessonOne;
 
-public class Cat extends Animal {
-
-
-    public Cat(String name, String breed, int age, String coloring, int requiredAmountFood) {
+public class Hamster extends Animal {
+    public Hamster(String name, String breed, int age, String coloring, int requiredAmountFood) {
         super(name, breed, age, coloring, requiredAmountFood);
     }
 
     @Override
+    public String toString() {
+        return "Хомяк -> " +
+                "кличка - " + getName() +
+                ", порода - " + getBreed() +
+                ", возраст - " + getAge() +
+                ", цвет - " + getColoring();
+    }
+
+    @Override
     public void say() {
-        System.out.println("мяу!");
+        System.out.println("Пи - пи - пи");
+    }
+
+    @Override
+    public void walk() {
+        super.walk();
     }
 
     @Override
@@ -23,17 +35,8 @@ public class Cat extends Animal {
     }
 
     @Override
-    public String toString() {
-        return "Кот -> " +
-                "кличка - " + getName() +
-                ", порода - " + getBreed() +
-                ", возраст - " + getAge() +
-                ", цвет - " + getColoring();
-    }
-
-    @Override
-    public void walk() {
-        super.walk();
+    public boolean equals(Object o) {
+        return super.equals(o);
     }
 
     @Override
@@ -94,10 +97,5 @@ public class Cat extends Animal {
     @Override
     public void setRequiredAmountFood(int requiredAmountFood) {
         super.setRequiredAmountFood(requiredAmountFood);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
     }
 }

@@ -1,39 +1,13 @@
 package LessonOne;
 
-public class Cat extends Animal {
-
-
-    public Cat(String name, String breed, int age, String coloring, int requiredAmountFood) {
+public class Rat extends Animal {
+    public Rat(String name, String breed, int age, String coloring, int requiredAmountFood) {
         super(name, breed, age, coloring, requiredAmountFood);
     }
 
     @Override
-    public void say() {
-        System.out.println("мяу!");
-    }
-
-    @Override
-    public void nutrition(int foodPortion, int requiredAmountFood) {
-        super.nutrition(foodPortion, requiredAmountFood);
-    }
-
-    @Override
-    public void play() {
-        super.play();
-    }
-
-    @Override
-    public String toString() {
-        return "Кот -> " +
-                "кличка - " + getName() +
-                ", порода - " + getBreed() +
-                ", возраст - " + getAge() +
-                ", цвет - " + getColoring();
-    }
-
-    @Override
-    public void walk() {
-        super.walk();
+    public boolean equals(Object o) {
+        return super.equals(o);
     }
 
     @Override
@@ -97,7 +71,32 @@ public class Cat extends Animal {
     }
 
     @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
+    public String toString() {
+        return "Крыса -> " +
+                "кличка - " + getName() +
+                ", порода - " + getBreed() +
+                ", возраст - " + getAge() +
+                ", цвет - " + getColoring();
     }
+
+    @Override
+    public void say() {
+        System.out.println("Пи - пи - пи");
+    }
+
+    @Override
+    public void walk() {
+        super.walk();
+    }
+
+    @Override
+    public void nutrition(int foodPortion, int requiredAmountFood) {
+        super.nutrition(foodPortion, requiredAmountFood);
+    }
+
+    @Override
+    public void play() {
+        super.play();
+    }
+
 }
