@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -13,7 +15,9 @@ public abstract class Animal {
     private String breed;
     private int age;
     private String coloring;
-    private boolean male;
+    private int requiredAmountFood;
+
+
 
     @Override
     public String toString() {
@@ -21,15 +25,39 @@ public abstract class Animal {
                 "name = '" + name + '\'' +
                 ", breed = '" + breed + '\'' +
                 ", age = " + age +
-                ", coloring = '" + coloring + '\'' +
-                ", male = " + male;
+                ", coloring = '" + coloring;
     }
 
     public abstract void say();
-    public abstract void walk();
-    public abstract void nutrition();
-    public abstract void play();
 
+    public void walk() {
+        System.out.println(getName() + "гуляет.");
+    }
+
+    public void nutrition(int foodPortion, int requiredAmountFood){
+        if (foodPortion > 0) {
+            if (foodPortion < requiredAmountFood) {
+                System.out.println("Мало! :( Надо увеличить порцию.");
+            }
+            try {
+                for (int i = foodPortion; i > 0; i--) {
+                    System.out.println("Питомец " + getName() + " кушает.");
+                    Thread.sleep(1000);
+                }
+            } catch (InterruptedException ie)
+            {
+                Thread.currentThread().interrupt();
+            }
+            System.out.println("Питомец " + getName() + " наелся.");
+        } else{
+            System.out.println("Дайте еды питомцу");
+        }
+
+    }
+
+    public void play() {
+        System.out.println(getName() + " играет.");
+    }
 
 
 }
