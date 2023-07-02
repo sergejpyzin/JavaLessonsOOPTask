@@ -31,7 +31,7 @@ public abstract class Animal {
     public abstract void say();
 
     public void walk() {
-        System.out.println(getName() + "гуляет.");
+        System.out.println(getName() + " гуляет.");
     }
 
     public void nutrition(int foodPortion, int requiredAmountFood){
