@@ -71,6 +71,11 @@ public class Rat extends Animal {
     }
 
     @Override
+    public void sleep() {
+        super.sleep();
+    }
+
+    @Override
     public String toString() {
         return "Крыса -> " +
                 "кличка - " + getName() +
@@ -81,7 +86,7 @@ public class Rat extends Animal {
 
     @Override
     public void say() {
-        System.out.println("Пи - пи - пи");
+        System.out.println("Пищит");
     }
 
     @Override

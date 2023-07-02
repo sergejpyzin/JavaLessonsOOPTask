@@ -76,6 +76,11 @@ public class Dog extends Animal {
     }
 
     @Override
+    public void sleep() {
+        super.sleep();
+    }
+
+    @Override
     public String toString() {
         return "Собака -> " +
                 "кличка - " + getName() +

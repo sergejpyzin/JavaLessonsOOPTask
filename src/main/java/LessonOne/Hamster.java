@@ -6,6 +6,11 @@ public class Hamster extends Animal {
     }
 
     @Override
+    public void sleep() {
+        super.sleep();
+    }
+
+    @Override
     public String toString() {
         return "Хомяк -> " +
                 "кличка - " + getName() +

@@ -31,7 +31,7 @@ public abstract class Animal {
     public abstract void say();
 
     public void walk() {
-        System.out.println(getName() + " гуляет.");
+        System.out.println("Питомец " + getName() + " гуляет.");
     }
 
     public void nutrition(int foodPortion, int requiredAmountFood){
@@ -42,13 +42,13 @@ public abstract class Animal {
             try {
                 for (int i = foodPortion; i > 0; i--) {
                     System.out.println("Питомец " + getName() + " кушает.");
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 }
             } catch (InterruptedException ie)
             {
                 Thread.currentThread().interrupt();
             }
-            System.out.println("Питомец " + getName() + " наелся.");
+            System.out.println("Питомец " + getName() + " поел.");
         } else{
             System.out.println("Дайте еды питомцу");
         }
@@ -56,7 +56,10 @@ public abstract class Animal {
     }
 
     public void play() {
-        System.out.println(getName() + " играет.");
+        System.out.println("Питомец " + getName() + " играет.");
+    }
+    public void sleep(){
+        System.out.println("Питомец " + getName() + " спит");
     }
 
 

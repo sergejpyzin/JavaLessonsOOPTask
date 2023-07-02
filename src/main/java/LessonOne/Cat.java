@@ -23,6 +23,11 @@ public class Cat extends Animal {
     }
 
     @Override
+    public void sleep() {
+        super.sleep();
+    }
+
+    @Override
     public String toString() {
         return "Кот -> " +
                 "кличка - " + getName() +
