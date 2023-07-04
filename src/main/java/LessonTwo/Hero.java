@@ -1,0 +1,47 @@
+package LessonTwo;
+
+public class Hero {
+    private int maxHealthPoint;
+    private int currentHealthPoint;
+    private int maxManaPoint;
+    private int currentManaPoint;
+
+    public Hero(int maxHealthPoint, int maxManaPoint) {
+        this.maxHealthPoint = maxHealthPoint;
+        this.currentHealthPoint = maxHealthPoint;
+        this.maxManaPoint = maxManaPoint;
+        this.currentManaPoint = maxManaPoint;
+    }
+
+    public int getMaxHealthPoint() {
+        return maxHealthPoint;
+    }
+
+    public void setMaxHealthPoint(int maxHealthPoint) {
+        this.maxHealthPoint = maxHealthPoint;
+    }
+
+    public int getCurrentHealthPoint() {
+        return currentHealthPoint;
+    }
+
+    public void setCurrentHealthPoint(int currentHealthPoint) {
+        this.currentHealthPoint = currentHealthPoint;
+    }
+
+    public int getMaxManaPoint() {
+        return maxManaPoint;
+    }
+
+    public void setMaxManaPoint(int maxManaPoint) {
+        this.maxManaPoint = maxManaPoint;
+    }
+
+    public int getCurrentManaPoint() {
+        return currentManaPoint;
+    }
+
+    public void setCurrentManaPoint(int currentManaPoint) {
+        this.currentManaPoint = currentManaPoint;
+    }
+}
