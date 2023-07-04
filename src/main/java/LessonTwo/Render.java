@@ -17,7 +17,6 @@ public abstract class Render {
             lineBar.append("♥");
         }
 
-        if ()
     }
 
 
