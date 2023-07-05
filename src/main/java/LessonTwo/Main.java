@@ -37,6 +37,17 @@ public class Main {
 
 
         building.showIndicator();
+        building.setCurrentHealthPoint(600);
+        building.showIndicator();
+
+        hero.showIndicator();
+        hero.setCurrentHealthPoint(30);
+        hero.setCurrentManaPoint(5);
+        hero.showIndicator();
+
+        neutral.showIndicator();
+        neutral.setCurrentHealthPoint(150);
+        neutral.showIndicator();
 
     }
 }

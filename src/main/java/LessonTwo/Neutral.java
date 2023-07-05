@@ -1,24 +1,12 @@
 package LessonTwo;
 
 public class Neutral extends Render {
-    private int maxHealthPoint;
+    private final int maxHealthPoint;
     private int currentHealthPoint;
 
     public Neutral(int maxHealthPoint) {
         this.maxHealthPoint = maxHealthPoint;
         this.currentHealthPoint = maxHealthPoint;
-    }
-
-    public int getMaxHealthPoint() {
-        return maxHealthPoint;
-    }
-
-    public void setMaxHealthPoint(int maxHealthPoint) {
-        this.maxHealthPoint = maxHealthPoint;
-    }
-
-    public int getCurrentHealthPoint() {
-        return currentHealthPoint;
     }
 
     public void setCurrentHealthPoint(int currentHealthPoint) {
@@ -32,7 +20,7 @@ public class Neutral extends Render {
 
     @Override
     protected void showIndicator() {
-        System.out.println("Текущее количество здоровья " + currentHealthPoint + "; Максимальное количество здоровья " +
+        System.out.println("Нейтральный персонаж -> Текущее количество здоровья " + currentHealthPoint + "; Максимальное количество здоровья " +
                 maxHealthPoint + ": " + showLineBar(maxHealthPoint, currentHealthPoint));
     }
 }
