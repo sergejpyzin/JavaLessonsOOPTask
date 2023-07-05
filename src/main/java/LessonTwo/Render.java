@@ -19,22 +19,22 @@ public abstract class Render {
         lineBar = new StringBuilder();
         int lineBarLength = (int) Math.ceil((currentPoint * 1.0) / maxPoint * 10);
         lineBar.append("*".repeat(lineBarLength));
-        String color;
+        String colorLine;
 
-        if (currentPoint >= maxPoint) {
-            color = ANSI_LIGHT_GREEN;
+        if (currentPoint == maxPoint) {
+            colorLine = ANSI_LIGHT_GREEN;
         } else if (lineBarLength > 8) {
-            color = ANSI_GREEN;
+            colorLine = ANSI_GREEN;
         } else if (lineBarLength > 6) {
-            color = ANSI_LIGHT_YELLOW;
+            colorLine = ANSI_LIGHT_YELLOW;
         } else if (lineBarLength > 4) {
-            color = ANSI_ORANGE;
+            colorLine = ANSI_ORANGE;
         } else if (lineBarLength > 2) {
-            color = ANSI_LIGHT_RED;
+            colorLine = ANSI_LIGHT_RED;
         } else if (lineBarLength > 1) {
-            color = ANSI_DARK_RED;
+            colorLine = ANSI_DARK_RED;
         } else if (lineBarLength > 0) {
-            color = ANSI_HI_DARK_RED;
+            colorLine = ANSI_HI_DARK_RED;
         } else if (currentPoint > 0) {
             return ANSI_BRIGHT_RED + "[" + ANSI_RESET +
                     ANSI_BLACK + "X" + ANSI_RESET +
@@ -43,7 +43,7 @@ public abstract class Render {
             return ANSI_BLACK + "[" + lineBar + "]" + ANSI_RESET;
         }
 
-        return color + "[" + lineBar + " ".repeat(10 - lineBarLength) + "]" + ANSI_RESET;
+        return colorLine + "[" + lineBar + " ".repeat(10 - lineBarLength) + "]" + ANSI_RESET;
     }
 
     protected abstract void showIndicator();
