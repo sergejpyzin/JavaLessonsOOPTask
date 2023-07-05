@@ -30,5 +30,13 @@ public class Main {
     С двумя звездочками : раскрасить вывод. Чем меньше здоровья, тем "краснее" цвет индикатора. Для полного здоровья - цвет зеленый.
     */
 
+    public static void main(String[] args) {
+        Building building = new Building(1000);
+        Hero hero = new Hero(400, 200);
+        Neutral neutral = new Neutral(200);
 
+
+        building.showIndicator();
+
+    }
 }
