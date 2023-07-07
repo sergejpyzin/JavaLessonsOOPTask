@@ -19,6 +19,8 @@ public class Main {
         container.addBoxes(new Box(200));
         container.addBoxes(new Box(100));
         container.addBoxes(new Box(400));
+        container.addBoxes(new Box(400));
+        container.addBoxes(new Box(400));
 
         Container container2 = new Container();
         container2.addBoxes(new Box(200));
@@ -30,9 +32,15 @@ public class Main {
             System.out.println(box);
         }
 
+        System.out.println("==================");
+
         while (container2.hasNext()){
             System.out.println(container2.next() + " ");
         }
 
+        System.out.println("==================");
+
+        Container.comparisonNumberBoxes(container, container2);
+        Container.comparison(container, container2);
     }
 }

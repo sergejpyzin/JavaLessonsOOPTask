@@ -4,9 +4,7 @@ import java.util.*;
 
 public class Container implements Comparable<Container>, Iterator<Box>, Iterable<Box> {
     private final List<Box> containers;
-    private int containerWeight;
     private int currentPosition;
-    private int lastPosition;
 
     public Container() {
         containers = new ArrayList<>();
@@ -17,7 +15,7 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
     }
 
     public int getContainerWeight() {
-        containerWeight = 0;
+        int containerWeight = 0;
         for (Box box : containers) {
             containerWeight += box.getWeight();
         }
@@ -81,7 +79,6 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
         if (!hasNext()) {
             throw new NoSuchElementException("В Container больше нет элементов");
         }
-        lastPosition = currentPosition + 1;
         return containers.get(currentPosition++);
     }
 }

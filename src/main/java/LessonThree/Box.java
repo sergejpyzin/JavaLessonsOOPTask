@@ -3,7 +3,7 @@ package LessonThree;
 
 
 public class Box {
-    private int weight;
+    private  int weight;
 
 
     public Box(int weight) {
@@ -12,10 +12,6 @@ public class Box {
 
     public int getWeight() {
         return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
     }
 
     @Override
