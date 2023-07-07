@@ -21,5 +21,7 @@ public class Main {
         container.addBoxes(new Box(400));
 
         System.out.println(container);
+
+        System.out.println(container.getContainerWeight());
     }
 }

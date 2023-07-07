@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Container {
     private final List<Box> containers;
+    private int containerWeight;
 
     public Container() {
         containers = new ArrayList<>();
@@ -12,6 +13,14 @@ public class Container {
 
     public void addBoxes(Box box) {
         containers.add(box);
+    }
+
+    public int getContainerWeight() {
+        containerWeight = 0;
+        for (Box box : containers) {
+            containerWeight += box.getWeight();
+        }
+        return containerWeight;
     }
 
     @Override
