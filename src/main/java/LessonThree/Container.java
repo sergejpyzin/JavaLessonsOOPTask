@@ -7,16 +7,19 @@ import java.util.Iterator;
 import java.util.List;
 @Value
 
-public class Container implements Iterable<Container>, Comparable<Container>{
+public class Container implements Iterable<Container>, Iterator<Container>, Comparable<Container>{
     private final List<Box> containers;
-    private int containerWeight;
 
-    public Container(int containerWeight) {
+    public Container() {
         containers = new ArrayList<>();
-        this.containerWeight = 0;
     }
     public void addBox(Box box){
         containers.add(box);
+
+    }
+
+    public int containerSize(){
+        return containers.size();
     }
 
     public int getContainerWeight(Box box){
@@ -31,5 +34,15 @@ public class Container implements Iterable<Container>, Comparable<Container>{
     @Override
     public int compareTo(Container o) {
         return (containerWeight - o.containerWeight);
+    }
+
+    @Override
+    public boolean hasNext() {
+        return false;
+    }
+
+    @Override
+    public Container next() {
+        return null;
     }
 }
