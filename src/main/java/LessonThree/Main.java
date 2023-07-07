@@ -20,8 +20,14 @@ public class Main {
         container.addBoxes(new Box(300));
         container.addBoxes(new Box(400));
 
-        System.out.println(container);
+        Container container2 = new Container();
+        container2.addBoxes(new Box(200));
+        container2.addBoxes(new Box(200));
+        container2.addBoxes(new Box(300));
+        container2.addBoxes(new Box(400));
 
-        System.out.println(container.getContainerWeight());
+        Container.comparison(container, container2);
+
+
     }
 }
