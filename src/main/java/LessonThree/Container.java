@@ -1,9 +1,6 @@
 package LessonThree;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class Container implements Comparable<Container>, Iterator<Box>, Iterable<Box> {
     private final List<Box> containers;
@@ -40,10 +37,22 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
         }
 
     }
+    public static void comparisonNumberBoxes (Container comparedContainer, Container container){
+      ContainerCountComparator containerCountComparator = new ContainerCountComparator();
+      if (containerCountComparator.compare(comparedContainer, container) > 0){
+          System.out.println("Контейнер " + comparedContainer + " имеет большее число ящиков");
+      } else if (containerCountComparator.compare(comparedContainer, container) < 0){
+          System.out.println("Контейнер " + comparedContainer + " имеет меньшее число ящиков");
+      } else {
+          System.out.println("Контейнеры имеют одинаковое число ящиков");
+      }
+    }
 
     public int numberBoxes(){
         return containers.size();
     }
+
+
 
     @Override
     public String toString() {
