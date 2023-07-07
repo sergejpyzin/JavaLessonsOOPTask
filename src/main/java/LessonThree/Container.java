@@ -25,11 +25,14 @@ public class Container implements Comparable<Container>{
 
     public static void comparison (Container comparedContainer, Container container){
         if (comparedContainer.compareTo(container) > 0){
-            System.out.println("Вес контейнера " + comparedContainer + " больше веса контейнера " + container);
+            System.out.println("Вес контейнера " + comparedContainer +
+                    " больше веса контейнера " + container);
         } else if (comparedContainer.compareTo(container) < 0) {
-            System.out.println("Вес контейнера " + comparedContainer + " меньше веса контейнера " + container);
+            System.out.println("Вес контейнера " + comparedContainer +
+                    " меньше веса контейнера " + container);
         }else {
-            System.out.println("Вес контейнера " + comparedContainer + " равен весу контейнера " + container);
+            System.out.println("Вес контейнера " + comparedContainer +
+                    " равен весу контейнера " + container);
         }
 
     }
