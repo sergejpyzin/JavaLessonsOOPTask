@@ -15,9 +15,9 @@ public class Main {
 
     public static void main(String[] args) {
         Container container = new Container();
-        container.addBoxes(new Box(100));
+        container.addBoxes(new Box(600));
         container.addBoxes(new Box(200));
-        container.addBoxes(new Box(300));
+        container.addBoxes(new Box(100));
         container.addBoxes(new Box(400));
 
         Container container2 = new Container();
@@ -26,8 +26,13 @@ public class Main {
         container2.addBoxes(new Box(300));
         container2.addBoxes(new Box(400));
 
-        Container.comparison(container, container2);
+        for (Box box : container) {
+            System.out.println(box);
+        }
 
+        while (container2.hasNext()){
+            System.out.println(container2.next() + " ");
+        }
 
     }
 }
