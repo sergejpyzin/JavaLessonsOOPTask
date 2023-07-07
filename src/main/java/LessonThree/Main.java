@@ -14,13 +14,8 @@ public class Main {
     */
 
     public static void main(String[] args) {
-        Container container = new Container(containerWeight, count);
-        container.addBox(new Box( 200));
-        container.addBox(new Box( 200));
-        container.addBox(new Box( 200));
-        container.addBox(new Box( 200));
-        container.addBox(new Box( 200));
-
-        System.out.println(container);
+        Box box = new Box(200);
+        box.setWeight(300);
+        System.out.println(box);
     }
 }
