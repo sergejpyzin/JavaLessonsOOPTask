@@ -35,6 +35,7 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
         }
 
     }
+
     public static void comparisonNumberBoxes (Container comparedContainer, Container container){
       ContainerCountComparator containerCountComparator = new ContainerCountComparator();
       if (containerCountComparator.compare(comparedContainer, container) > 0){
