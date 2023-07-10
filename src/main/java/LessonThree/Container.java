@@ -22,7 +22,8 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
         return containerWeight;
     }
 
-    public static void comparison(Container comparedContainer, Container container) {
+    //Метод проверки контейнеров по весу
+    public static void comparisonWeightBoxes(Container comparedContainer, Container container) {
         if (comparedContainer.compareTo(container) > 0) {
             System.out.println("Вес контейнера " + comparedContainer +
                     " больше веса контейнера " + container);
@@ -36,21 +37,21 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
 
     }
 
-    public static void comparisonNumberBoxes (Container comparedContainer, Container container){
-      ContainerCountComparator containerCountComparator = new ContainerCountComparator();
-      if (containerCountComparator.compare(comparedContainer, container) > 0){
-          System.out.println("Контейнер " + comparedContainer + " имеет большее число ящиков");
-      } else if (containerCountComparator.compare(comparedContainer, container) < 0){
-          System.out.println("Контейнер " + comparedContainer + " имеет меньшее число ящиков");
-      } else {
-          System.out.println("Контейнеры имеют одинаковое число ящиков");
-      }
+    // Метод проверки контейнеров по количеству ящиков
+     public static void comparisonNumberBoxes(Container comparedContainer, Container container) {
+        ContainerCountComparator containerCountComparator = new ContainerCountComparator();
+        if (containerCountComparator.compare(comparedContainer, container) > 0) {
+            System.out.println("Контейнер " + comparedContainer + " имеет большее число ящиков");
+        } else if (containerCountComparator.compare(comparedContainer, container) < 0) {
+            System.out.println("Контейнер " + comparedContainer + " имеет меньшее число ящиков");
+        } else {
+            System.out.println("Контейнеры имеют одинаковое число ящиков");
+        }
     }
 
-    public int numberBoxes(){
+    public int numberBoxes() {
         return containers.size();
     }
-
 
 
     @Override
