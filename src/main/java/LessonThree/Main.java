@@ -14,7 +14,18 @@ public class Main {
     */
 
     public static void main(String[] args) {
-        // Создание котнтейнеров
+
+        // Создание экземпляра класса Box
+        Box boxes = new Box(222);
+
+        // Использование метода getWeight
+        System.out.println(boxes.getWeight());
+
+        // Использование метода setWeight
+        boxes.setWeight(454);
+        System.out.println(boxes);
+
+        // Создание экземпляра класса Container
         Container container = new Container();
         container.addBoxes(new Box(600));
         container.addBoxes(new Box(200));
