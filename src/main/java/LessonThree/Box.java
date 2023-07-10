@@ -20,6 +20,6 @@ public class Box {
 
     @Override
     public String toString() {
-        return String.format("Вес: %s", weight);
+        return String.format("Ящик весом: %s", weight);
     }
 }

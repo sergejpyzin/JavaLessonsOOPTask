@@ -6,6 +6,7 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
     private final List<Box> containers;
     private int currentPosition;
 
+
     public Container() {
         containers = new ArrayList<>();
     }
@@ -22,28 +23,25 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
         return containerWeight;
     }
 
-    //Метод проверки контейнеров по весу
+    //Метод проверки контейнеров по весу. Сделать не статикой не получилось
     public static void comparisonWeightBoxes(Container comparedContainer, Container container) {
         if (comparedContainer.compareTo(container) > 0) {
-            System.out.println("Вес контейнера " + comparedContainer +
-                    " больше веса контейнера " + container);
+            System.out.println("Первый контейнер имеет больший вес");
         } else if (comparedContainer.compareTo(container) < 0) {
-            System.out.println("Вес контейнера " + comparedContainer +
-                    " меньше веса контейнера " + container);
+            System.out.println("Первый контейнер имеет меньший вес");
         } else {
-            System.out.println("Вес контейнера " + comparedContainer +
-                    " равен весу контейнера " + container);
+            System.out.println("Вес обоих контейнеров одинаковый.");
         }
 
     }
 
-    // Метод проверки контейнеров по количеству ящиков
-     public static void comparisonNumberBoxes(Container comparedContainer, Container container) {
+    // Метод проверки контейнеров по количеству ящиков. Сделать не статикой не получилось
+    public static void comparisonNumberBoxes(Container comparedContainer, Container container) {
         ContainerCountComparator containerCountComparator = new ContainerCountComparator();
         if (containerCountComparator.compare(comparedContainer, container) > 0) {
-            System.out.println("Контейнер " + comparedContainer + " имеет большее число ящиков");
+            System.out.println("Первый контейнер имеет большее число ящиков");
         } else if (containerCountComparator.compare(comparedContainer, container) < 0) {
-            System.out.println("Контейнер " + comparedContainer + " имеет меньшее число ящиков");
+            System.out.println("Первый контейнер имеет меньшее число ящиков");
         } else {
             System.out.println("Контейнеры имеют одинаковое число ящиков");
         }
@@ -56,9 +54,7 @@ public class Container implements Comparable<Container>, Iterator<Box>, Iterable
 
     @Override
     public String toString() {
-        return "Container{" +
-                "containers=" + containers +
-                '}';
+        return "В состав контейнера общим весом " + getContainerWeight() + " входят " + containers;
     }
 
     @Override
