@@ -1,4 +1,7 @@
 package LessonFour;
 
-public class Orange {
+public class Orange extends Fruit{
+    public Orange(int weight) {
+        super(weight);
+    }
 }
