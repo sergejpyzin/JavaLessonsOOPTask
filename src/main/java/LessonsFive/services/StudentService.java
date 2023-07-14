@@ -1,8 +1,8 @@
 package LessonsFive.services;
 
-import lesson4.models.Student;
-import lesson4.models.User;
-import lesson4.repositories.UserRepository;
+import LessonsFive.models.Student;
+import LessonsFive.models.User;
+import LessonsFive.repositories.UserRepository;
 
 import java.util.Collections;
 import java.util.Comparator;

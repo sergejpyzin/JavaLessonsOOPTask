@@ -1,7 +1,7 @@
 package LessonsFive.view;
 
-import lesson4.controllers.UserController;
-import lesson4.models.Student;
+import LessonsFive.controllers.UserController;
+import LessonsFive.models.Student;
 
 import java.util.List;
 

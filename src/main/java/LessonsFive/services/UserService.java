@@ -1,6 +1,6 @@
 package LessonsFive.services;
 
-import lesson4.models.User;
+import LessonsFive.models.User;
 
 import java.util.List;
 

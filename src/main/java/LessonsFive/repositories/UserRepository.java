@@ -1,7 +1,7 @@
 package LessonsFive.repositories;
 
-import lesson4.models.Student;
-import lesson4.models.User;
+import LessonsFive.models.Student;
+import LessonsFive.models.User;
 
 import java.util.List;
 

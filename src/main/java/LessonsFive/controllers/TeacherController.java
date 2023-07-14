@@ -1,43 +1,42 @@
 package LessonsFive.controllers;
 
 import LessonsFive.models.Student;
+import LessonsFive.models.Teacher;
 import LessonsFive.services.UserService;
 
 import java.util.List;
 
-public class StudentController implements UserController<Student> {
+public class TeacherController implements UserController<Teacher>{
 
-    private final UserService<Student> userService;
+    private final UserService<Teacher> userService;
 
-    public StudentController(UserService<Student> userService) {
-        this.userService = userService;
+    public TeacherController(UserService<Teacher> teacherUserService) {
+        this.userService = teacherUserService;
     }
-
-    //@PostMethod("/students")
     @Override
     public void create(String fullName, Integer age, String phoneNumber, String groupTitle) {
         userService.create(fullName, age, phoneNumber, groupTitle);
     }
 
-    //@GetMethod("/students")
+    //@GetMethod("/teacher")
     @Override
-    public List<Student> getAll() {
+    public List<Teacher> getAll() {
         return userService.getAll();
     }
 
-    //@DeleteMethod("/students")
+    //@DeleteMethod("/teacher")
     @Override
     public int remove(String fullName) {
         return userService.remove(fullName);
     }
 
     @Override
-    public List<Student> getAllSortByFullName() {
+    public List<Teacher> getAllSortByFullName() {
         return userService.getAllSortByFullName();
     }
 
     @Override
-    public List<Student> getAllSortById() {
+    public List<Teacher> getAllSortById() {
         return userService.getAllSortById();
 
     }

@@ -1,6 +1,6 @@
 package LessonsFive.view;
 
-import lesson4.controllers.GroupController;
+import LessonsFive.controllers.GroupController;
 
 public class GroupView {
     private final GroupController controller;

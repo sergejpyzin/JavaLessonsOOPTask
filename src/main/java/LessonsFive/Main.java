@@ -1,13 +1,13 @@
 package LessonsFive;
 
-import lesson4.controllers.GroupController;
-import lesson4.controllers.StudentController;
-import lesson4.repositories.StudentRepository;
-import lesson4.services.GroupService;
-import lesson4.services.StudentService;
-import lesson4.view.GroupView;
-import lesson4.view.SortType;
-import lesson4.view.StudentView;
+import LessonsFive.controllers.GroupController;
+import LessonsFive.controllers.StudentController;
+import LessonsFive.repositories.StudentRepository;
+import LessonsFive.services.GroupService;
+import LessonsFive.services.StudentService;
+import LessonsFive.view.GroupView;
+import LessonsFive.view.SortType;
+import LessonsFive.view.StudentView;
 
 public class Main {
 

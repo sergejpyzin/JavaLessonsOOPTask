@@ -1,7 +1,7 @@
 package LessonsFive.controllers;
 
-import lesson4.models.User;
-import lesson4.services.GroupService;
+import LessonsFive.models.User;
+import LessonsFive.services.GroupService;
 
 import java.util.List;
 
