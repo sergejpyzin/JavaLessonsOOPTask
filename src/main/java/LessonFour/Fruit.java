@@ -1,7 +1,7 @@
 package LessonFour;
 
 public class Fruit {
-    private final int weight;
+    private int weight;
 
     public Fruit(int weight) {
         this.weight = weight;
@@ -9,6 +9,17 @@ public class Fruit {
 
     public int getWeight() {
         return weight;
+    }
+    public void setWeight(int weight){
+        this.weight = weight;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Fruit -> " +
+                "weight = " + weight;
     }
 }
 
