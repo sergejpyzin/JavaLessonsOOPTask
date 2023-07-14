@@ -15,4 +15,5 @@ public class GroupController {
     public List<User> getAllUsersFromGroup(String groupTitle) {
         return groupService.getAllUsersFromGroup(groupTitle);
     }
+
 }

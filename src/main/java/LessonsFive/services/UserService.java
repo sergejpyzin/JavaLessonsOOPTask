@@ -11,5 +11,5 @@ public interface UserService<T extends User>{
     List<T> getAllSortById();
     int remove(String fullName);
 
-    List<T> getAllByTitile(String groupTitle);
+    List<T> getAllByTitle(String groupTitle);
 }

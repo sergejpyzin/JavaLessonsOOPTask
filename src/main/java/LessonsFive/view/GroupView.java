@@ -13,6 +13,7 @@ public class GroupView {
         System.out.println("<<<<<<<<<<<<<<<<<<<<<<");
         System.out.println("СТУДЕНТЫ И ПРЕПОДАВАТЕЛИ ГРУППЫ " + groupTitle);
         controller.getAllUsersFromGroup(groupTitle).forEach(System.out::println);
+
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>");
     }
 }
