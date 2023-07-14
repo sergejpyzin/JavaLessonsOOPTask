@@ -12,5 +12,6 @@ public interface UserRepository <T extends User> {
 
     int remove(String fullName);
 
-    List<Student> getAllByGroupTitle(String groupTitle);
+    List<T> getAllByGroupTitle(String groupTitle);
+
 }
