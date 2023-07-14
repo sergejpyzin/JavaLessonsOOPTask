@@ -3,7 +3,7 @@ package LessonFour;
 public class Main {
     public static void main(String[] args) {
         // Создание экземпляров класса
-        Box<Fruit> boxApple = new Box<>();
+        Box<Apple> boxApple = new Box<>();
         Box<Orange> orangeBox = new Box<>();
         Apple apple = new Apple(2);
         Orange orange = new Orange(6);
@@ -24,8 +24,8 @@ public class Main {
 
 
         // "Пересыпание" фруктов из коробки в коробку
-        FillingAndCleansing<Fruit> fillingAndCleansing = new FillingAndCleansing<>();
-        Box newbox = fillingAndCleansing.filling(boxApple);
+        Box<Apple> newbox = new Box<>();
+        boxApple.moveTo(newbox.getFruit());
 
         // Вывод новой и старой коробки
         System.out.println();

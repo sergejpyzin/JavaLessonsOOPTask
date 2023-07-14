@@ -38,6 +38,11 @@ public class Box<T extends Fruit> implements Iterator<T>, Iterable<T> {
         return boxWeight;
     }
 
+    public void moveTo(List<T> newFruit) {
+        newFruit.addAll(fruits);
+        fruits.clear();
+    }
+
     @Override
     public Iterator<T> iterator() {
         return this;
