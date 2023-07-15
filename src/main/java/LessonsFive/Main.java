@@ -24,8 +24,9 @@ public class Main {
 
     public static void main(String[] args) {
         StudentView view = getStudentController();
-        GroupView groupView = getGroupView();
         TeacherView teacherView = getTeacherController();
+        GroupView groupView = getGroupView();
+
 //        -------------------------------------------------------------------------
 
         view.create("Ivan Morozov", 18, "02", "11Б");
@@ -35,6 +36,8 @@ public class Main {
         view.create("Elena Ivanova", 19, "911", "10А");
         view.create("Anna Morozova", 17, "01", "11A");
         teacherView.create("Inna Fedorova",27, "333", "11A");
+        teacherView.create("Inna Morozova",23, "332", "11A");
+        teacherView.create("Inna Petrova",24, "444", "11A");
         teacherView.sendOnConsole(SortType.ID);
 
         groupView.printAllFromGroup("11A");

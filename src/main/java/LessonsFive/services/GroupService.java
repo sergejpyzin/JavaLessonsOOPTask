@@ -18,13 +18,10 @@ public class GroupService {
 
     public List<User> getAllUsersFromGroup(String groupTitle) {
         List<User> users = new ArrayList<>(studentService.getAllByTitle(groupTitle));
-//        Collections.addAll(users, teacherService.getAll())
+        users.addAll(teacherService.getAll());
 
         return users;
     }
 
-    public List<User> getAllTeacherFromGroup(String groupTitle){
-        List<User> teacher = new ArrayList<>(teacherService.getAllByTitle(groupTitle));
-        return teacher;
-    }
+
 }
