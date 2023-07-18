@@ -1,6 +1,7 @@
 package LessonsFive.view;
 
 import LessonsFive.controllers.UserController;
+import LessonsFive.models.Student;
 import LessonsFive.models.Teacher;
 
 import java.util.List;
@@ -56,5 +57,11 @@ public class TeacherView implements UserView{
             System.out.println("Удалено преподавателей: " + removeCount);
         }
 
+    }
+    public String teacherGetName(String name){
+        List<Teacher> teachers = controller.getName(name);
+
+        return teachers.isEmpty() ? "Не найдено ни одного студента"
+                : "Удалось найти следующих студентов: " + teachers;
     }
 }

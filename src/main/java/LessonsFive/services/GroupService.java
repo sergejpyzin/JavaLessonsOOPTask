@@ -18,7 +18,7 @@ public class GroupService {
 
     public List<User> getAllUsersFromGroup(String groupTitle) {
         List<User> users = new ArrayList<>(studentService.getAllByTitle(groupTitle));
-        users.addAll(teacherService.getAll());
+        users.addAll(teacherService.getAllByTitle(groupTitle));
 
         return users;
     }

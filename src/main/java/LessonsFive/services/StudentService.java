@@ -60,4 +60,9 @@ public class StudentService implements UserService<Student> {
     public List<Student> getAllByTitle(String groupTitle) {
         return userRepository.getAllByGroupTitle(groupTitle);
     }
+
+    @Override
+    public List<Student> getUserName(String name) {
+        return userRepository.getName(name);
+    }
 }

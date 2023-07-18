@@ -13,5 +13,6 @@ public interface UserRepository <T extends User> {
     int remove(String fullName);
 
     List<T> getAllByGroupTitle(String groupTitle);
+    List<T> getName(String name);
 
 }

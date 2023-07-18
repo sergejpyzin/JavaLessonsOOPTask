@@ -57,6 +57,13 @@ public class StudentRepository implements UserRepository<Student> {
         }
         return maxId;
     }
+
+    @Override
+    public List<Student> getName(String name) {
+        List<Student> fullNameStudy = new ArrayList<>();
+        return students.stream().filter(student -> student.getFullName().equals(name)).collect(Collectors.toList());
+
+    }
 }
 
 

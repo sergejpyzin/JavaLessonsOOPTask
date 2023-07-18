@@ -60,4 +60,10 @@ public class StudentView implements UserView {
         }
 
     }
+    public String studentGetName(String name){
+        List<Student> students = controller.getName(name);
+
+        return students.isEmpty() ? "Не найдено ни одного студента"
+                : "Удалось найти следующих студентов: " + students;
+    }
 }

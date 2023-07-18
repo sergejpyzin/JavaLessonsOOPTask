@@ -40,4 +40,9 @@ public class TeacherController implements UserController<Teacher>{
         return userService.getAllSortById();
 
     }
+
+    @Override
+    public List<Teacher> getName(String name) {
+        return userService.getUserName(name);
+    }
 }

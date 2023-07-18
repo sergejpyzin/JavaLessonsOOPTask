@@ -41,4 +41,9 @@ public class StudentController implements UserController<Student> {
         return userService.getAllSortById();
 
     }
+
+    @Override
+    public List<Student> getName(String name) {
+        return userService.getUserName(name);
+    }
 }

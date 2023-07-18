@@ -12,4 +12,5 @@ public interface UserService<T extends User>{
     int remove(String fullName);
 
     List<T> getAllByTitle(String groupTitle);
+    List<T> getUserName (String name);
 }
