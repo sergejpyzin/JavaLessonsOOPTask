@@ -62,27 +62,27 @@ public class UniversityApp {
                     System.out.println("Новый преподаватель добавлен");
                 }
                 case "3" -> {
-                    switch (requestIntegerFromUser("""
+                    switch (requestStringFromUser("""
                             Выберете формат сортировки списка студентов:\s
                             1. Сортировать студентов по умолчанию;
                             2. Сортировать студентов по имени;
                             3. Сортировать студентов по id;
                             """)) {
-                        case 1 -> studentView.sendOnConsole(SortType.NONE);
-                        case 2 -> studentView.sendOnConsole(SortType.NAME);
-                        case 3 -> studentView.sendOnConsole(SortType.ID);
+                        case "1" -> studentView.sendOnConsole(SortType.NONE);
+                        case "2" -> studentView.sendOnConsole(SortType.NAME);
+                        case "3" -> studentView.sendOnConsole(SortType.ID);
                     }
                 }
                 case "4" -> {
-                    switch (requestIntegerFromUser("""
+                    switch (requestStringFromUser("""
                             Выберете формат сортировки списка преподавателей:\s
                             1. Сортировать преподавателей по умолчанию;
                             2. Сортировать преподавателей по имени;
                             3. Сортировать преподавателей по id;
                             """)) {
-                        case 1 -> teacherView.sendOnConsole(SortType.NONE);
-                        case 2 -> teacherView.sendOnConsole(SortType.NAME);
-                        case 3 -> teacherView.sendOnConsole(SortType.ID);
+                        case "1" -> teacherView.sendOnConsole(SortType.NONE);
+                        case "2" -> teacherView.sendOnConsole(SortType.NAME);
+                        case "3" -> teacherView.sendOnConsole(SortType.ID);
                     }
                 }
                 case "5" -> groupView.printAllFromGroup(requestStringFromUser("Введите номер группы: "));
