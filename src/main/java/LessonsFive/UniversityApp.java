@@ -122,7 +122,7 @@ public class UniversityApp {
     private static String requestStringFromUser(String message) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
-        return scanner.next();
+        return scanner.next().replace("_", " ");
     }
 
     private static int requestIntegerFromUser(String message) {
