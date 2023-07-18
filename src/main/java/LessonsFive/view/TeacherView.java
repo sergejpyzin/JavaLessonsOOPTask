@@ -61,7 +61,7 @@ public class TeacherView implements UserView{
     public String teacherGetName(String name){
         List<Teacher> teachers = controller.getName(name);
 
-        return teachers.isEmpty() ? "Не найдено ни одного студента"
-                : "Удалось найти следующих студентов: " + teachers;
+        return teachers.isEmpty() ? "Не найдено ни одного преподавателя"
+                : "Удалось найти следующих преподавателей: " + teachers;
     }
 }

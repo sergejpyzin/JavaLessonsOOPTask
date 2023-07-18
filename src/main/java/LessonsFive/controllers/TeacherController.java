@@ -1,6 +1,5 @@
 package LessonsFive.controllers;
 
-import LessonsFive.models.Student;
 import LessonsFive.models.Teacher;
 import LessonsFive.services.UserService;
 

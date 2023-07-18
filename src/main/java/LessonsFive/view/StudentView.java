@@ -36,10 +36,6 @@ public class StudentView implements UserView {
 
         System.out.println("===================================");
         System.out.println("Для вывода использована " + sortType);
-//        for (Student student : students) {
-//            System.out.println(student);
-//        }
-//        students.forEach((student) -> System.out.println(student));
         students.forEach(System.out::println);
         System.out.println("===================================");
     }
@@ -62,7 +58,6 @@ public class StudentView implements UserView {
     }
     public String studentGetName(String name){
         List<Student> students = controller.getName(name);
-
         return students.isEmpty() ? "Не найдено ни одного студента"
                 : "Удалось найти следующих студентов: " + students;
     }

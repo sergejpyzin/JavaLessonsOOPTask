@@ -1,10 +1,8 @@
 package LessonsFive.services;
 
-import LessonsFive.models.Teacher;
 import LessonsFive.models.User;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class GroupService {

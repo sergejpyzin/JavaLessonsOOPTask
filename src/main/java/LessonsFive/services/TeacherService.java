@@ -31,15 +31,7 @@ public class TeacherService implements UserService<Teacher>{
 
     public List<Teacher> getAllSortByFullName() {
         var teachers = userRepository.getAll();
-/*        students.sort(new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return o1.getFullName().compareTo(o2.getFullName());
-            }
-        });*/
-//        students.sort((o1, o2) -> o1.getFullName().compareTo(o2.getFullName()));
         teachers.sort(Comparator.comparing(User::getFullName));
-
         return teachers;
     }
 

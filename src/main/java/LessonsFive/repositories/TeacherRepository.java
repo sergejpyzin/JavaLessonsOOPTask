@@ -1,7 +1,6 @@
 package LessonsFive.repositories;
 
 
-import LessonsFive.models.Student;
 import LessonsFive.models.Teacher;
 
 import java.util.ArrayList;

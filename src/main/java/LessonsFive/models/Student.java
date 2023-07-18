@@ -7,7 +7,7 @@ public class Student extends User{
 
     @Override
     public String toString() {
-        return String.format("Студент имеет следующие свойства: id: %s, name %s, age %s, phone number %s, group %s",
+        return String.format("Студент имеет следующие свойства: id: %s, Имя %s, age %s, Тел. номер %s, Группа %s",
                 getId(),
                 getFullName(), getAge(), getPhoneNumber(), getGroupTitle());
     }
