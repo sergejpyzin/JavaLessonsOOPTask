@@ -46,48 +46,51 @@ public class UniversityApp {
                     0. Выход из программы.
                     """);
 
-            switch (requestIntegerFromUser("Введите номер команды: ")) {
-                case 1 -> {
-                    studentView.create(requestStringFromUser("Введите полное имя студента"), requestIntegerFromUser("Введите возраст студента"),
-                            requestStringFromUser("Введите телефонный номер студента"), requestStringFromUser("Введите номер группы студента"));
+            switch (requestStringFromUser("Введите номер команды: ")) {
+                case "1" -> {
+                    studentView.create(requestStringFromUser("Введите полное имя студента"),
+                            requestIntegerFromUser("Введите возраст студента"),
+                            requestStringFromUser("Введите телефонный номер студента"),
+                            requestStringFromUser("Введите номер группы студента"));
                     System.out.println("Новый студент добавлен");
                 }
-                case 2 -> {
+                case "2" -> {
                     teacherView.create(requestStringFromUser("Введите полное имя преподавателя"),
-                            requestIntegerFromUser("Введите возраст преподавателя"), requestStringFromUser("Введите телефонный номер преподавателя"),
+                            requestIntegerFromUser("Введите возраст преподавателя"),
+                            requestStringFromUser("Введите телефонный номер преподавателя"),
                             requestStringFromUser("Введите номер группы преподавателя"));
                     System.out.println("Новый преподаватель добавлен");
                 }
-                case 3 -> {
+                case "3" -> {
                     switch (requestIntegerFromUser("""
                             Выберете формат сортировки списка студентов:\s
-                            1. Сортировать по ID студентов;
-                            2. Сортировать по полному имени студентов;
-                            3. Сортировать по возрасту студентов;
+                            1. Сортировать студентов по умолчанию;
+                            2. Сортировать студентов по имени;
+                            3. Сортировать студентов по id;
                             """)) {
-                        case 1 -> studentView.sendOnConsole(SortType.ID);
+                        case 1 -> studentView.sendOnConsole(SortType.NONE);
                         case 2 -> studentView.sendOnConsole(SortType.NAME);
-                        case 3 -> studentView.sendOnConsole(SortType.NONE);
+                        case 3 -> studentView.sendOnConsole(SortType.ID);
                     }
                 }
-                case 4 -> {
+                case "4" -> {
                     switch (requestIntegerFromUser("""
                             Выберете формат сортировки списка преподавателей:\s
-                            1. Сортировать по ID преподавателей;
-                            2. Сортировать по полному имени преподавателей;
-                            3. Сортировать по возрасту преподавателей;
+                            1. Сортировать преподавателей по умолчанию;
+                            2. Сортировать преподавателей по имени;
+                            3. Сортировать преподавателей по id;
                             """)) {
-                        case 1 -> teacherView.sendOnConsole(SortType.ID);
+                        case 1 -> teacherView.sendOnConsole(SortType.NONE);
                         case 2 -> teacherView.sendOnConsole(SortType.NAME);
-                        case 3 -> teacherView.sendOnConsole(SortType.NONE);
+                        case 3 -> teacherView.sendOnConsole(SortType.ID);
                     }
                 }
-                case 5 -> groupView.printAllFromGroup(requestStringFromUser("Введите номер группы: "));
-                case 6 -> System.out.println(studentView.studentGetName(requestStringFromUser("Введите полное имя студента:")));
-                case 7 -> System.out.println(teacherView.teacherGetName(requestStringFromUser("Введите полное имя преподавателя:")));
-                case 8 -> studentView.removeUser(requestStringFromUser("Введите полное имя студента для удаления: "));
-                case 9 -> teacherView.removeUser(requestStringFromUser("Введите полное имя преподавателя для удаления: "));
-                case 0 -> {
+                case "5" -> groupView.printAllFromGroup(requestStringFromUser("Введите номер группы: "));
+                case "6" -> System.out.println(studentView.studentGetName(requestStringFromUser("Введите полное имя студента:")));
+                case "7" -> System.out.println(teacherView.teacherGetName(requestStringFromUser("Введите полное имя преподавателя:")));
+                case "8" -> studentView.removeUser(requestStringFromUser("Введите полное имя студента для удаления: "));
+                case "9" -> teacherView.removeUser(requestStringFromUser("Введите полное имя преподавателя для удаления: "));
+                case "0" -> {
                     System.out.println("Спасибо за пользование нашей программой. До свидания.");
                     System.exit(0);
                 }
