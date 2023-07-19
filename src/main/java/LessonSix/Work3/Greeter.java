@@ -1,22 +1,22 @@
 package LessonSix.Work3;
 
-public class Greeter {
+public class Greeter extends GreetingForm {
     private String formality;
 
-    public String greet() {
-        switch (this.formality) {
-            case "formal":
-                return "Good evening, sir.";
-            case "casual":
-                return "Sup bro?";
-            case "intimate":
-                return "Hello Darling!";
-            default:
-                return "Hello.";
-        }
+    public String greet(String greet) {
+        return this.formality = getGreet(greet);
+    }
+
+    public String getFormality() {
+        return formality;
     }
 
     public void setFormality(String formality) {
         this.formality = formality;
+    }
+
+    @Override
+    public String toString() {
+        return formality;
     }
 }
