@@ -1,11 +1,6 @@
 package LessonSix.work2;
 
-public class AccountReportGenerator implements ReportGenerator {
-
-    @Override
-    public String generateXml() {
-        throw new UnsupportedOperationException();
-    }
+public class AccountReportGenerator implements ReportGeneratorJson {
 
     @Override
     public String generateJson() {
